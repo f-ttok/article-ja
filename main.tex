@@ -1,0 +1,76 @@
+% !TEX program = uplatex
+\documentclass[dvipdfmx, 12pt, a4paper, uplatex]{jsarticle}
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs=true}
+\usepackage[notrig]{physics}
+\usepackage{geometry}
+\geometry{truedimen, hmargin=10mm, vmargin=18mm}
+
+\usepackage{xcolor}
+\definecolor{primary}{HTML}{49beb7}
+\definecolor{accent}{HTML}{cc5b49}
+\definecolor{text}{HTML}{212529}
+\usepackage{graphicx}
+\usepackage{algorithm,algpseudocode}
+\usepackage{tcolorbox}
+\usepackage[colorlinks=true,urlcolor=primary!95!text,citecolor=primary!50!text]{hyperref}
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{{#1}}{\bfseries#2}}
+\usepackage{pxjahyper}
+\usepackage[T1]{fontenc}
+\usepackage[uplatex,deluxe]{otf}
+\usepackage[noto-jp]{pxchfon}
+% \usepackage[noto]{pxchfon}
+\usepackage[scaled=1.08]{newtxtext,newtxmath}
+\usepackage{bm}
+\renewcommand{\mathbb}[1]{\vvmathbb{#1}}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsubsection}{\bfseries}
+
+\newenvironment{block}[1]{\begin{tcolorbox}[title=#1, sharp corners, fonttitle=\bfseries, coltitle=text!80!black, colback=primary!10!white, colbacktitle=primary!20!white, colframe=primary!20!white]}{\end{tcolorbox}}
+\newenvironment{alertblock}[1]{\begin{tcolorbox}[title=#1, sharp corners, fonttitle=\bfseries, coltitle=text!80!black, colback=accent!10!white, colbacktitle=accent!20!white, colframe=accent!20!white]}{\end{tcolorbox}}
+\newenvironment{exampleblock}[1]{\begin{tcolorbox}[title=#1, sharp corners, fonttitle=\bfseries, coltitle=text!80!black, colback=text!10!white, colbacktitle=text!20!white, colframe=text!20!white]}{ \end{tcolorbox}}
+
+\input{macro.tex}
+\newcommand{\alp}{\alpha}
+\newcommand{\gmm}{\gamma}
+\newcommand{\Gmm}{\Gamma}
+\newcommand{\dlt}{\delta}
+\newcommand{\Dlt}{\Delta}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\tht}{\theta}
+\newcommand{\Tht}{\Theta}
+\newcommand{\kpp}{\kappa}
+\newcommand{\Kpp}{\Kappa}
+\newcommand{\lmd}{\lambda}
+\newcommand{\Lmd}{\Lambda}
+\newcommand{\sgm}{\sigma}
+\newcommand{\Sgm}{\Sigma}
+\newcommand{\ups}{\upsilon}
+\newcommand{\Ups}{\Upsilon}
+\newcommand{\omg}{\omega}
+\newcommand{\Omg}{\Omega}
+
+
+\begin{document}
+  \begin{center}\bfseries
+    {\Large タイトル}\\
+    {\large\today~~~名前}
+  \end{center}
+
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  \begin{align}
+    \bfB(P) = \frac{\mu_0}{4\pi}\int \frac{\bfI\times \hat{r}'}{r'^2} \dd{l}
+    = \frac{\mu_0}{4\pi} I \int \frac{\dd{\bml}\times \hat{r}'}{r'^2}
+  \end{align}
+
+  \bibliography{reference}
+  \bibliographystyle{jplain}
+\end{document}
